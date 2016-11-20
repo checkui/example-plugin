@@ -1,0 +1,14 @@
+{
+  "name": "example-plugin",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "url": "git@github.com:checkui/plugin-example.git",
+    "type": "git"
+  },
+  "author": "Kirk Strobeck <kirk@strobeck.com>",
+  "license": "MIT",
+  "dependencies": {
+    "mocha": "^3.1.2"
+  }
+}
