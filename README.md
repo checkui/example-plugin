@@ -1,4 +1,4 @@
-# Plugin example
+# Plugin guide
 
 [![CircleCI](https://circleci.com/gh/checkui/plugin-guide.svg?style=svg)](https://circleci.com/gh/checkui/plugin-guide)
 
