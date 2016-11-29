@@ -6,6 +6,7 @@
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
     "mocha": "^3.1.2",
+    "plugin-title-length": "https://github.com/checkui/plugin-title-length.git",
     "request": "^2.79.0",
     "request-promise": "^4.1.1"
   },
@@ -25,6 +26,6 @@
     "test": "npm run test:lint && npm run test:unit",
     "test:lint": "eslint .",
     "test:unit": "mocha test --no-timeouts",
-    "test:unit:watch": "mocha test --watch --no-timeouts"
+    "test:unit:watch": "mocha test --watch"
   }
 }
