@@ -25,7 +25,7 @@
   "scripts": {
     "test": "npm run test:lint && npm run test:unit",
     "test:lint": "eslint .",
-    "test:unit": "mocha test --no-timeouts",
+    "test:unit": "mocha test",
     "test:unit:watch": "mocha test --watch"
   }
 }
