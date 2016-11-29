@@ -19,8 +19,8 @@ describe('Plugins', () => {
     serverDirs.forEach((element) => {
       servers[element] = spawn('node', [element], { detached: true });
       servers[element].stdout.on('data', (data) => {
-        if (data.toString() !== `ready\n`) console.log(`${element}: ${data}`);
-        if (data.toString() === `ready\n`) {
+        if (data.toString() !== 'ready\n') console.log(`${element}: ${data}`);
+        if (data.toString() === 'ready\n') {
           i += 1;
           if (i === serverDirs.length) {
             requestPromise('http://localhost:3033/a.html')
