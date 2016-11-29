@@ -1,5 +1,7 @@
 # Plugin example
 
+[![CircleCI](https://circleci.com/gh/checkui/plugin-guide.svg?style=svg)](https://circleci.com/gh/checkui/plugin-guide)
+
 How to develop a plugin for the CheckUI app store.
 
 This guide will run any plugin. It currently runs the [Title length](https://github.com/checkui/plugin-title-length) plugin.
