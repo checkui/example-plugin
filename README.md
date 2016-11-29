@@ -24,6 +24,6 @@ The `snapshots` object may be populated with one or two snapshots. So we can use
 }
 ```
 
-### Postback webhook receives
+### Postback webhook
 
 Plugins have 60 minutes to post results. Ideally the result is posted as soon as possible.
