@@ -11,8 +11,9 @@ const serverDirs = [
   path.join(__dirname, '../node_modules/plugin-title-length'),
 ];
 const servers = {};
+const state = {};
 
-describe('Plugin', () => {
+describe('Plugins', () => {
   before((done) => {
     let i = 0;
     serverDirs.forEach((element) => {
@@ -22,7 +23,6 @@ describe('Plugin', () => {
         if (data.toString() === `ready\n`) {
           i += 1;
           if (i === serverDirs.length) {
-            const state = {};
             requestPromise('http://localhost:3033/a.html')
             .then((result) => {
               state.a = result;
@@ -38,10 +38,8 @@ describe('Plugin', () => {
               });
             })
             .then((result) => {
-              console.log(999)
-              console.log(result);
+              state.result = result;
               done();
-              // done();
             });
           }
         }
@@ -51,14 +49,8 @@ describe('Plugin', () => {
 
   after(() => Object.keys(servers).forEach(x => servers[x].kill('SIGTERM')));
 
-  it('should do stuff', (done) => {
-    console.log('boom');
-    assert.equal(1, 1);
+  it('shoud run the "title length" plugin properly', (done) => {
+    assert.deepEqual(state.result, { a: 11, b: 13, compare: 2 });
     done();
-    // requestPromise('http://localhost:3030/')
-    // .then((body) => {
-    //   assert.equal('Hello World!', body);
-    //   done();
-    // });
   });
 });
